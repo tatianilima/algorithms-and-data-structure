@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections;
 
+/*
+ * In C#, the ArrayList is a non-generic collection of objects whose size increases dynamically. 
+ * It is the same as Array except that its size increases dynamically.
+ */
+
 namespace arraylist.exercise
 {
     class Program
