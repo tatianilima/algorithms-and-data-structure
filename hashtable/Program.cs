@@ -11,10 +11,17 @@ namespace hashtable
 
             //Check if Hashtable contains key or value
             CheckHashtable(ht);
+            Console.WriteLine();
 
             //Show keys/values from Hashtable
+            PrintHashTable(ht);
+            Console.WriteLine();
+
             ShowOnlyKeys(ht);
+            Console.WriteLine();
+
             ShowValuesByKey(ht);
+            Console.WriteLine();
 
             //Remove elements from Hashtable
             RemoveElement(ht);
@@ -40,16 +47,26 @@ namespace hashtable
 
         static void CheckHashtable(Hashtable ht)
         {
-            Console.WriteLine(ht.ContainsKey("0001"));
-            Console.WriteLine(ht.ContainsValue("C#"));
-            Console.WriteLine(ht.ContainsValue("PHP"));
-            Console.WriteLine(ht.Contains("Java"));
+            Console.WriteLine("Contains Key 0001: " + ht.ContainsKey("0001"));
+            Console.WriteLine("Contains Value C#: " + ht.ContainsValue("C#"));
+            Console.WriteLine("Contains Value PHP: " + ht.ContainsValue("PHP"));
+            Console.WriteLine("Contains 0002: " + ht.Contains("0002")); //search only by Key
+        }
+
+        static void PrintHashTable(Hashtable ht)
+        {
+            foreach (DictionaryEntry element in ht)
+            {
+                string id = (string)element.Key;
+                string language = (string)element.Value;
+                Console.WriteLine("Id: {0}, Language: {1}", id, language);
+            }
         }
 
         static void ShowOnlyKeys(Hashtable ht)
         {
             
-            foreach (int key in ht.Keys)
+            foreach (var key in ht.Keys)
             {
                 Console.WriteLine("Keys : " + key);
             }
@@ -60,21 +77,21 @@ namespace hashtable
             ICollection keys = ht.Keys;
             foreach (String k in keys)
             {
-                Console.WriteLine(ht[k]);
+                Console.WriteLine("Values: " + ht[k]);
             }
 
         }
 
         static void RemoveElement(Hashtable ht)
         {
-            ht.Remove("Python");
-            Console.WriteLine(ht.ContainsValue("Python"));
+            ht.Remove("0004");
+            Console.WriteLine("After remove, contains Python: " + ht.ContainsValue("Python"));
         }
 
         static void RemoveAllElements(Hashtable ht)
         {
             ht.Clear();
-            Console.WriteLine(ht.ContainsValue("Python"));
+            Console.WriteLine("After remove all, contains Python: " + ht.ContainsValue("Python"));
         }
     }
 }
