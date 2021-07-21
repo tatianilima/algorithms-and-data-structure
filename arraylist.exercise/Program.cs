@@ -12,6 +12,15 @@ namespace arraylist.exercise
     {
         static void Main(string[] args)
         {
+            FirstExercise();
+            Console.WriteLine();
+            SecondExercise();
+
+            Console.ReadLine();
+        }
+
+        static void FirstExercise()
+        {
             var arlist = new ArrayList()
                 {
                     2, "Steve", " ", true, 4.5, null
@@ -28,7 +37,31 @@ namespace arraylist.exercise
                 Console.WriteLine(val);
             Console.WriteLine("=================================");
 
-            Console.ReadLine();
+        }
+
+        static ArrayList Merge(String[] words, String[] more)
+        {
+            ArrayList sentences = new ArrayList();
+            foreach (var w in words)
+            {
+                sentences.Add(w);
+            }
+
+            foreach (var m in more)
+            {
+                sentences.Add(m);
+            }
+
+            return sentences;
+        }
+
+        static void SecondExercise()
+        {
+            string[] words = { "water", "chicken", "fish" };
+            string[] more = { "onion", "lettuce", "rice" };
+            ArrayList mergeSentences = Merge(words, more);
+            foreach (var val in mergeSentences)
+                Console.WriteLine(val);            
         }
     }
 }
