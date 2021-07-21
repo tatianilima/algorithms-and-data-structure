@@ -15,6 +15,14 @@ namespace arraylist.exercise
             var secondElement = arlist[1];
             Console.WriteLine(firstElement);
             Console.WriteLine(secondElement);
+
+            Console.WriteLine("=================================");
+            arlist.Insert(1, "Second Item");
+
+            foreach (var val in arlist)
+                Console.WriteLine(val);
+            Console.WriteLine("=================================");
+
             Console.ReadLine();
         }
     }
