@@ -1,6 +1,19 @@
 ﻿using System;
 using System.Collections;
 
+/*
+ ** Hashtable ** 
+Retorna nulo se tentarmos encontrar uma chave que não existe.
+É mais lento do que um Dictionary porque requer boxing e unboxing.
+Todos os membros de um Hashtable são thread safe.
+Não é um tipo genérico. O que significa que não podemos usá-lo com qualquer tipo de dados.
+
+** Dictionary **
+Retorna um erro se tentar encontrar uma chave que não existe.
+É mais rápido do que um Hashtable porque não há boxing e unboxing.
+Somente membros estáticos públicos são thread-safe.
+É um tipo genérico, logo podemos usá-lo com qualquer tipo de dados.
+*/
 namespace hashtable
 {
     class Program
