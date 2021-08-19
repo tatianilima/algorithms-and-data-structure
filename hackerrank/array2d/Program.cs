@@ -17,6 +17,31 @@ namespace array2d
                 arr.Add(listData);
                 Console.Out.WriteLine(inputData);
             }
+            int result = 0;
+            if (result >= 90 && result < 100)
+            {
+                return "T";
+            }
+            else if (result >= 80 && < 90)
+            {
+                return "E";
+            }
+            else if (result >= 70 && < 80)
+            {
+                return "A";
+            }
+            else if (result >= 55 && < 70)
+            {
+                return "P";
+            }
+            else if (result >= 40 && < 55)
+            {
+                return "D";
+            }
+            else if (result < 40)
+            {
+                return "T";
+            }
         }
     }
 }
