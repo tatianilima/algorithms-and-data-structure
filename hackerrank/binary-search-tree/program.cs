@@ -27,12 +27,10 @@ class Solution{
         else{
             Node cur;
             if(data<=root.data){
-                cur=insert(root.left,data);
-                root.left=cur;
+                root.left=insert(root.left,data);
             }
             else{
-                cur=insert(root.right,data);
-                root.right=cur;
+                root.right=insert(root.right,data);
             }
             return root;
         }
