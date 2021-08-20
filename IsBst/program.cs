@@ -20,7 +20,6 @@ class BinaryTree{
     public virtual bool IsBst(List<int> preorder){
         Stack<int> myStack = new Stack<int>();
         int root = int.MinValue;
-        int countPreorder = preorder.Count;
         
         foreach(int element in preorder){
             if(element < root){
